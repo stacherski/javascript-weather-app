@@ -3,7 +3,7 @@
 import { config } from "./config.js";
 
 let weather = [];
-let cities = ["Wrocław", "Łódź", "acapulco", "Kopenhaga", "New York"];
+let cities = ["Wrocław", "Lodz", "Acapulco", "Kopenhaga", "New York"];
 const app = document.getElementById("app");
 
 const resolveWindDirection = (direction) => {
@@ -82,7 +82,7 @@ const createWeatherBox = (data) => {
 //fetch data from API
 const fetchData = (city) => {
   fetch(
-    `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=pl&units=metric&appid=${config.WEATHER_API_KEY}`
+    `https://api.openweathermap.org/data/2.5/weather?q=${city}&lang=pl&units=metric&appid=${config.OPENWEATHER_API_KEY}`
   )
     .then((res) => res.json())
     .then((data) => {
